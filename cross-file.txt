@@ -1,0 +1,14 @@
+[binaries]
+c = 'arm-none-eabi-gcc'
+cpp = 'arm-none-eabi-g++'
+ar = 'arm-none-eabi-ar'
+ld = 'arm-none-eabi-ld'
+objcopy = 'arm-none-eabi-objcopy'
+objdump = 'arm-none-eabi-objdump'
+strip = 'arm-none-eabi-strip'
+
+[host_machine]
+system = 'baremetal'
+cpu_family = 'arm'
+cpu = 'cortex-m4'
+endian = 'little'
