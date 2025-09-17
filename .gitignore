@@ -1,0 +1,43 @@
+# --- Build system ---
+/build/
+/meson-private/
+/subprojects/*/packagecache/
+
+# --- Compiled object files ---
+*.o
+*.d
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+
+# --- Firmware binaries ---
+*.elf
+*.bin
+*.hex
+*.map
+
+# --- Debug / analysis outputs ---
+*.lst
+*.out
+*.log
+
+# --- Editor / IDE files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*.user
+*.workspace
+*.code-workspace
+
+# --- STM32Cube / auto-generated ---
+/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f411xe.s
+/Drivers/STM32F4xx_HAL_Driver/Src/*.c
+# (if you vendor in CubeF4: better to commit only the minimal subset you use)
+
+# --- OS / Misc ---
+.DS_Store
+Thumbs.db
