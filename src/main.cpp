@@ -14,7 +14,6 @@ int main() {
     HAL_Init();
     SystemClock_Config();
     EnableExceptions();
-
     __HAL_RCC_GPIOA_CLK_ENABLE();
 
     GPIO_InitTypeDef gpio = {0};
