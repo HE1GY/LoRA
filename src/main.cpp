@@ -7,11 +7,13 @@ extern "C" {
 #include "stm32f4xx_ll_system.h"
 }
 
-void SystemClock_Config();
+static void EnableExceptions();
+static void SystemClock_Config();
 
 int main() {
     HAL_Init();
     SystemClock_Config();
+    EnableExceptions();
 
     __HAL_RCC_GPIOA_CLK_ENABLE();
 
@@ -27,7 +29,7 @@ int main() {
     }
 }
 
-void SystemClock_Config(void)
+static void SystemClock_Config(void)
 {
   /* Enable HSE oscillator */
   LL_RCC_HSE_EnableBypass();
@@ -64,3 +66,8 @@ void SystemClock_Config(void)
   SystemCoreClock = 100000000;
 }
 
+
+static void EnableExceptions()
+{
+  SCB->SHCSR |= SCB_SHCSR_USGFAULTENA_Msk | SCB_SHCSR_BUSFAULTENA_Msk | SCB_SHCSR_MEMFAULTENA_Msk;
+}
