@@ -9,4 +9,6 @@ board_lib = static_library('board',
   include_directories: include_directories('.'),
 )
 
-
+board_dep = declare_dependency(
+  link_with : board_lib,
+)
