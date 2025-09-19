@@ -8,6 +8,6 @@ project('LoRa', 'c', 'cpp',
 
 subdir('toolchain')
 subdir('board')
-subdir('app')
 subdir('libs')
+subdir('app')
 

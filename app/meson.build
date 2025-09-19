@@ -11,7 +11,7 @@ src = files(
 elf = executable('firmware.elf',
   sources : src,
   include_directories : include_directories(inc_dir),
-  dependencies : [board_dep, driver_dep],
+  dependencies : [board_dep, driver_dep, freertos_dep],
   link_args : ['-T', board_linker],   # from board/<mcu>/meson.build
   install : false
 )
