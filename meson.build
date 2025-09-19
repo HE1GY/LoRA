@@ -13,6 +13,7 @@ common_flags = [
   '-mfpu=fpv4-sp-d16',
   '-mfloat-abi=hard',
   '-ffreestanding',
+  '-Wl,-Map=output.map',
 ]
 
 add_project_arguments(common_flags, language: ['c', 'cpp'])
